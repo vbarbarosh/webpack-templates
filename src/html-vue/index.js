@@ -1,3 +1,5 @@
+import './sass/main.sass';
+
 import Vue from 'vue';
 
 // https://github.com/webpack/webpack/issues/625
