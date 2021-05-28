@@ -5,7 +5,6 @@ import Vue from 'vue';
 const require_components = require.context('./components', true, /\.vue$/);
 require_components.keys().forEach(function (key) {
     const name = key.replace(/.*[/](.*)\.vue$/, '$1');
-    console.log(name);
     Vue.component(name, require_components(key).default);
 });
 
