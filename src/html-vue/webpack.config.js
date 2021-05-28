@@ -36,6 +36,8 @@ const prod = {
     plugins: [
         new VueLoaderPlugin(),
         new webpack.DefinePlugin({
+            __dev__: JSON.stringify(false),
+            __prod__: JSON.stringify(true),
             __version__: JSON.stringify('1.0.0'),
             __date__: JSON.stringify(new Date().toJSON()),
         }),
@@ -76,6 +78,8 @@ const dev = {
     plugins: [
         new VueLoaderPlugin(),
         new webpack.DefinePlugin({
+            __dev__: JSON.stringify(true),
+            __prod__: JSON.stringify(false),
             __version__: JSON.stringify('1.0.0'),
             __date__: JSON.stringify(new Date().toJSON()),
         }),

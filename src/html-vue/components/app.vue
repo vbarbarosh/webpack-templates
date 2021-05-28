@@ -2,6 +2,10 @@
     <div class="app">
         <app-header />
         <div>
+            __dev__: {{ __dev__ }}
+            <br>
+            __prod__: {{ __prod__ }}
+            <br>
             <input-number v-model="height" />
             <br>
             height={{ height }}

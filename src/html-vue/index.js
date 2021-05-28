@@ -11,6 +11,14 @@ require_components.keys().forEach(function (key) {
 });
 
 Vue.mixin({
+    computed: {
+        __dev__: function () {
+            return __dev__;
+        },
+        __prod__: function () {
+            return __prod__;
+        },
+    },
     methods: {
         px: function (x) {
             return x + 'px';
