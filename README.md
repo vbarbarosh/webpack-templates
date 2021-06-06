@@ -31,13 +31,9 @@ https://stackoverflow.com/a/65376531
       ]
     }
 
-https://jaykariesch.medium.com/webpack-5-beta-babel-loader-why-do-i-still-have-arrow-functions-6a22980dcae4
+https://webpack.js.org/configuration/target/#string
 
-    // webpack.config.js
-    module.exports = {
-      ... webpack config props...
-      output: {
-        filename: [name]-[contenthash].js,
-        ecmaVersion: 5 // <= this is it
-      }
-    }
+    esX - Compile for specified ECMAScript version. Examples: es5, es2020.
+
+    browserslist - Infer a platform and the ES-features from a
+                   browserslist-config (default if browserslist config is available)
