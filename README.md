@@ -1,6 +1,6 @@
 Templates for Webpack
 
-## `.browserslistrc`
+## .browserslistrc
 
 Use `.browserslistrc` to specify supported browsers. `babel-loader` with `@babel/preset-env`, and
 `autoprefixer` will consult this file for supported browsers.
@@ -13,3 +13,31 @@ Use `.browserslistrc` to specify supported browsers. `babel-loader` with `@babel
     Firefox >= 40
     Safari >= 7
     iOS >= 7
+
+## How to remove arrow functions from webpack output
+
+https://stackoverflow.com/a/65376531
+
+    // webpack.config.js
+    module: {
+       ...
+       target: "es5", // include this!!
+       loaders: [
+         {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+         }
+      ]
+    }
+
+https://jaykariesch.medium.com/webpack-5-beta-babel-loader-why-do-i-still-have-arrow-functions-6a22980dcae4
+
+    // webpack.config.js
+    module.exports = {
+      ... webpack config props...
+      output: {
+        filename: [name]-[contenthash].js,
+        ecmaVersion: 5 // <= this is it
+      }
+    }
