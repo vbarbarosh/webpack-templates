@@ -1,6 +1,8 @@
-main();
+import cli from '@vbarbarosh/node-helpers/src/cli';
 
-function main()
+cli(main);
+
+async function main()
 {
     console.log('hello');
 }
