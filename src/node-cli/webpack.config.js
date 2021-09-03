@@ -3,20 +3,20 @@ const path = require('path');
 const prod = {
     mode: 'production',
     target: 'node',
-    entry: '.',
+    entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, '../../dist/node-cli-prod'),
-        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'build/node-cli-prod'),
+        filename: 'app.js',
     },
 };
 
 const dev = {
     mode: 'development',
     target: 'node',
-    entry: '.',
+    entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, '../../dist/node-cli-dev'),
-        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'build/node-cli-dev'),
+        filename: 'app.js',
     },
 };
 
