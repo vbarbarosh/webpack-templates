@@ -2,7 +2,7 @@
 
 const config = {
     spec: ['src/**/*.test.js'],
-    require: '@babel/register',
+    require: ['@babel/register', './mocha.global.js'],
     recursive: true,
 };
 
